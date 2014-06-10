@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset=utf-8>
+	<title>Juego de ahorcado</title>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+	<script type="text/javascript" src="js/jquery.countdownTimer.js"></script>
+	<script type="text/javascript" src="js/funciones.js"></script>
+</head>
+<body>
+	
+	<div class="principal">
+		<!-- Pantalla de inicio -->
+		<div class="jumbotron" id="Presentacion">
+			<h1>Ahorcado</h1>
+			<p>Juego colaborativo para reforzar los conocimientos de la materia de Aplicaciones Colaborativas de la MSICU.</p>
+			<p>Consta de una ronda de preguntas, tendrás 15 segundos para contestar cada una.</p>
+			<p>Los equipos se conforman de máximo 3 participantes y al final de cada ronda podrán ver su puntuación y la de sus contrincantes. El que tenga más aciertos en el menor tiempo gana.</p>
+			<p><a class="btn btn-primary btn-lg" role="button" id="BtnEmpezar">Empezar</a></p>
+		</div>
+
+		<!-- Mensajes -->
+		<div id="success" class="alert alert-success" style="display:none;">
+			<h3>Ganaste :)</h3>
+			<button type="button" class="btn btn-success" id="Siguiente">
+				<span class="glyphicon glyphicon-chevron-right"></span> Continuar
+			</button>
+		</div>
+		<div id="warning" class="alert alert-warning" style="display:none;">¡Oops! Se acabo el tiempo...</div>
+		<div id="danger" class="alert alert-danger" style="display:none;">Perdiste :(</div>
+
+		<!-- Juego -->
+		<div class="JuegoAhorcado" id="JuegoAhorcado" style="display:none;">
+			<div class="ContenedorJuego" id="ContenedorJuego">
+				<div id="ContenedorTimer" style="margin-left:670px;">
+					<span>Tiempo: </span>
+					<span id="timer" class="style colorDefinition size_lg"></span>
+				</div>
+				<div id="Pregunta" class="Pregunta"></div>
+				<div class="ColumnaUno">
+					<div id="ContenedorAbecedario" class="ContenedorAbecedario">
+						<ul class="Azul" id="letras"></ul>
+					</div>
+					<div class="Palabra" id="Palabra"></div>
+				</div>
+				<div class="ColumnaDos">
+					<div id="monito" class="ContenedorAhorcado">
+						<div id="cabeza" class="Cabeza_" style="display:none;"></div>
+						<div id="brazoizquierdo" class="BrazoIzquierdo_" style="display:none;"></div>
+						<div id="tronco" class="Tronco_" style="display:none;"></div>
+						<div id="brazoderecho" class="BrazoDerecho_" style="display:none;"></div>
+						<div id="pieizquierdo" class="PieIzquierdo_" style="display:none;"></div>
+						<div id="piederecho" class="PieDerecho_" style="display:none;"></div>
+					</div>
+				</div>
+			</div>
+			<div id="resultado" class="Resultado" style="display:none;"></div>
+		</div>
+	</div>
+		
+</body>
+</html>
